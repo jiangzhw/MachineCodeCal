@@ -1,0 +1,484 @@
+{D6BDAFB2-9435-491F-BB87-6AA0F0BC31A2} Reference
+The {D6BDAFB2-9435-491F-BB87-6AA0F0BC31A2} COM object is a QAxObject with the CLSID .
+Interfaces
+ISWbemObjectEx 
+Event Interfaces
+Public Slots:
+void AssociatorsAsync_(IDispatch* objWbemSink, QString strAssocClass = 0, QString strResultClass = 0, QString strResultRole = 0, QString strRole = 0, bool bClassesOnly = 0, bool bSchemaOnly = 0, QString strRequiredAssocQualifier = 0, QString strRequiredQualifier = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* Associators_(QString strAssocClass = 0, QString strResultClass = 0, QString strResultRole = 0, QString strRole = 0, bool bClassesOnly = 0, bool bSchemaOnly = 0, QString strRequiredAssocQualifier = 0, QString strRequiredQualifier = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+IDispatch* Clone_();
+bool CompareTo_(IDispatch* objWbemObject, int iFlags = 0);
+void DeleteAsync_(IDispatch* objWbemSink, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+void Delete_(int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void ExecMethodAsync_(IDispatch* objWbemSink, QString strMethodName, IDispatch* objWbemInParameters = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* ExecMethod_(QString strMethodName, IDispatch* objWbemInParameters = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+QString GetObjectText_(int iFlags = 0);
+QString GetText_(WbemObjectTextFormatEnum iObjectTextFormat, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void InstancesAsync_(IDispatch* objWbemSink, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* Instances_(int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void PutAsync_(IDispatch* objWbemSink, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* Put_(int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void ReferencesAsync_(IDispatch* objWbemSink, QString strResultClass = 0, QString strRole = 0, bool bClassesOnly = 0, bool bSchemaOnly = 0, QString strRequiredQualifier = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* References_(QString strResultClass = 0, QString strRole = 0, bool bClassesOnly = 0, bool bSchemaOnly = 0, QString strRequiredQualifier = 0, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void Refresh_(int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+void SetFromText_(QString bsText, WbemObjectTextFormatEnum iObjectTextFormat, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+IDispatch* SpawnDerivedClass_(int iFlags = 0);
+IDispatch* SpawnInstance_(int iFlags = 0);
+void SubclassesAsync_(IDispatch* objWbemSink, int iFlags = 0, IDispatch* objWbemNamedValueSet = 0, IDispatch* objWbemAsyncContext = 0);
+IDispatch* Subclasses_(int iFlags = 0, IDispatch* objWbemNamedValueSet = 0);
+Signals:
+void exception(int code, QString source, QString disc, QString help);
+void propertyChanged(QString name);
+void signal(QString name, int argc, void* argv);
+Properties:
+QString objectName;
+QVariant Derivation_;
+IDispatch* Methods_;
+IDispatch* Path_;
+IDispatch* Properties_;
+IDispatch* Qualifiers_;
+IDispatch* Security_;
+IDispatch* SystemProperties_;
+QString control;
+
+Member Type Documentation
+WbemAuthenticationLevelEnum
+wbemAuthenticationLevelDefault =0
+wbemAuthenticationLevelNone =1
+wbemAuthenticationLevelConnect =2
+wbemAuthenticationLevelCall =3
+wbemAuthenticationLevelPkt =4
+wbemAuthenticationLevelPktIntegrity =5
+wbemAuthenticationLevelPktPrivacy =6
+WbemChangeFlagEnum
+wbemChangeFlagCreateOrUpdate =0
+wbemChangeFlagUpdateOnly =1
+wbemChangeFlagCreateOnly =2
+wbemChangeFlagUpdateCompatible =0
+wbemChangeFlagUpdateSafeMode =32
+wbemChangeFlagUpdateForceMode =64
+wbemChangeFlagStrongValidation =128
+wbemChangeFlagAdvisory =65536
+WbemCimtypeEnum
+wbemCimtypeSint8 =16
+wbemCimtypeUint8 =17
+wbemCimtypeSint16 =2
+wbemCimtypeUint16 =18
+wbemCimtypeSint32 =3
+wbemCimtypeUint32 =19
+wbemCimtypeSint64 =20
+wbemCimtypeUint64 =21
+wbemCimtypeReal32 =4
+wbemCimtypeReal64 =5
+wbemCimtypeBoolean =11
+wbemCimtypeString =8
+wbemCimtypeDatetime =101
+wbemCimtypeReference =102
+wbemCimtypeChar16 =103
+wbemCimtypeObject =13
+WbemComparisonFlagEnum
+wbemComparisonFlagIncludeAll =0
+wbemComparisonFlagIgnoreQualifiers =1
+wbemComparisonFlagIgnoreObjectSource =2
+wbemComparisonFlagIgnoreDefaultValues =4
+wbemComparisonFlagIgnoreClass =8
+wbemComparisonFlagIgnoreCase =16
+wbemComparisonFlagIgnoreFlavor =32
+WbemConnectOptionsEnum
+wbemConnectFlagUseMaxWait =128
+WbemErrorEnum
+wbemNoErr =0
+wbemErrFailed =-2147217407
+wbemErrNotFound =-2147217406
+wbemErrAccessDenied =-2147217405
+wbemErrProviderFailure =-2147217404
+wbemErrTypeMismatch =-2147217403
+wbemErrOutOfMemory =-2147217402
+wbemErrInvalidContext =-2147217401
+wbemErrInvalidParameter =-2147217400
+wbemErrNotAvailable =-2147217399
+wbemErrCriticalError =-2147217398
+wbemErrInvalidStream =-2147217397
+wbemErrNotSupported =-2147217396
+wbemErrInvalidSuperclass =-2147217395
+wbemErrInvalidNamespace =-2147217394
+wbemErrInvalidObject =-2147217393
+wbemErrInvalidClass =-2147217392
+wbemErrProviderNotFound =-2147217391
+wbemErrInvalidProviderRegistration =-2147217390
+wbemErrProviderLoadFailure =-2147217389
+wbemErrInitializationFailure =-2147217388
+wbemErrTransportFailure =-2147217387
+wbemErrInvalidOperation =-2147217386
+wbemErrInvalidQuery =-2147217385
+wbemErrInvalidQueryType =-2147217384
+wbemErrAlreadyExists =-2147217383
+wbemErrOverrideNotAllowed =-2147217382
+wbemErrPropagatedQualifier =-2147217381
+wbemErrPropagatedProperty =-2147217380
+wbemErrUnexpected =-2147217379
+wbemErrIllegalOperation =-2147217378
+wbemErrCannotBeKey =-2147217377
+wbemErrIncompleteClass =-2147217376
+wbemErrInvalidSyntax =-2147217375
+wbemErrNondecoratedObject =-2147217374
+wbemErrReadOnly =-2147217373
+wbemErrProviderNotCapable =-2147217372
+wbemErrClassHasChildren =-2147217371
+wbemErrClassHasInstances =-2147217370
+wbemErrQueryNotImplemented =-2147217369
+wbemErrIllegalNull =-2147217368
+wbemErrInvalidQualifierType =-2147217367
+wbemErrInvalidPropertyType =-2147217366
+wbemErrValueOutOfRange =-2147217365
+wbemErrCannotBeSingleton =-2147217364
+wbemErrInvalidCimType =-2147217363
+wbemErrInvalidMethod =-2147217362
+wbemErrInvalidMethodParameters =-2147217361
+wbemErrSystemProperty =-2147217360
+wbemErrInvalidProperty =-2147217359
+wbemErrCallCancelled =-2147217358
+wbemErrShuttingDown =-2147217357
+wbemErrPropagatedMethod =-2147217356
+wbemErrUnsupportedParameter =-2147217355
+wbemErrMissingParameter =-2147217354
+wbemErrInvalidParameterId =-2147217353
+wbemErrNonConsecutiveParameterIds =-2147217352
+wbemErrParameterIdOnRetval =-2147217351
+wbemErrInvalidObjectPath =-2147217350
+wbemErrOutOfDiskSpace =-2147217349
+wbemErrBufferTooSmall =-2147217348
+wbemErrUnsupportedPutExtension =-2147217347
+wbemErrUnknownObjectType =-2147217346
+wbemErrUnknownPacketType =-2147217345
+wbemErrMarshalVersionMismatch =-2147217344
+wbemErrMarshalInvalidSignature =-2147217343
+wbemErrInvalidQualifier =-2147217342
+wbemErrInvalidDuplicateParameter =-2147217341
+wbemErrTooMuchData =-2147217340
+wbemErrServerTooBusy =-2147217339
+wbemErrInvalidFlavor =-2147217338
+wbemErrCircularReference =-2147217337
+wbemErrUnsupportedClassUpdate =-2147217336
+wbemErrCannotChangeKeyInheritance =-2147217335
+wbemErrCannotChangeIndexInheritance =-2147217328
+wbemErrTooManyProperties =-2147217327
+wbemErrUpdateTypeMismatch =-2147217326
+wbemErrUpdateOverrideNotAllowed =-2147217325
+wbemErrUpdatePropagatedMethod =-2147217324
+wbemErrMethodNotImplemented =-2147217323
+wbemErrMethodDisabled =-2147217322
+wbemErrRefresherBusy =-2147217321
+wbemErrUnparsableQuery =-2147217320
+wbemErrNotEventClass =-2147217319
+wbemErrMissingGroupWithin =-2147217318
+wbemErrMissingAggregationList =-2147217317
+wbemErrPropertyNotAnObject =-2147217316
+wbemErrAggregatingByObject =-2147217315
+wbemErrUninterpretableProviderQuery =-2147217313
+wbemErrBackupRestoreWinmgmtRunning =-2147217312
+wbemErrQueueOverflow =-2147217311
+wbemErrPrivilegeNotHeld =-2147217310
+wbemErrInvalidOperator =-2147217309
+wbemErrLocalCredentials =-2147217308
+wbemErrCannotBeAbstract =-2147217307
+wbemErrAmendedObject =-2147217306
+wbemErrClientTooSlow =-2147217305
+wbemErrNullSecurityDescriptor =-2147217304
+wbemErrTimeout =-2147217303
+wbemErrInvalidAssociation =-2147217302
+wbemErrAmbiguousOperation =-2147217301
+wbemErrQuotaViolation =-2147217300
+wbemErrTransactionConflict =-2147217299
+wbemErrForcedRollback =-2147217298
+wbemErrUnsupportedLocale =-2147217297
+wbemErrHandleOutOfDate =-2147217296
+wbemErrConnectionFailed =-2147217295
+wbemErrInvalidHandleRequest =-2147217294
+wbemErrPropertyNameTooWide =-2147217293
+wbemErrClassNameTooWide =-2147217292
+wbemErrMethodNameTooWide =-2147217291
+wbemErrQualifierNameTooWide =-2147217290
+wbemErrRerunCommand =-2147217289
+wbemErrDatabaseVerMismatch =-2147217288
+wbemErrVetoPut =-2147217287
+wbemErrVetoDelete =-2147217286
+wbemErrInvalidLocale =-2147217280
+wbemErrProviderSuspended =-2147217279
+wbemErrSynchronizationRequired =-2147217278
+wbemErrNoSchema =-2147217277
+wbemErrProviderAlreadyRegistered =-2147217276
+wbemErrProviderNotRegistered =-2147217275
+wbemErrFatalTransportError =-2147217274
+wbemErrEncryptedConnectionRequired =-2147217273
+wbemErrRegistrationTooBroad =-2147213311
+wbemErrRegistrationTooPrecise =-2147213310
+wbemErrTimedout =-2147209215
+wbemErrResetToDefault =-2147209214
+WbemFlagEnum
+wbemFlagReturnImmediately =16
+wbemFlagReturnWhenComplete =0
+wbemFlagBidirectional =0
+wbemFlagForwardOnly =32
+wbemFlagNoErrorObject =64
+wbemFlagReturnErrorObject =0
+wbemFlagSendStatus =128
+wbemFlagDontSendStatus =0
+wbemFlagEnsureLocatable =256
+wbemFlagDirectRead =512
+wbemFlagSendOnlySelected =0
+wbemFlagUseAmendedQualifiers =131072
+wbemFlagGetDefault =0
+wbemFlagSpawnInstance =1
+wbemFlagUseCurrentTime =1
+WbemImpersonationLevelEnum
+wbemImpersonationLevelAnonymous =1
+wbemImpersonationLevelIdentify =2
+wbemImpersonationLevelImpersonate =3
+wbemImpersonationLevelDelegate =4
+WbemObjectTextFormatEnum
+wbemObjectTextFormatCIMDTD20 =1
+wbemObjectTextFormatWMIDTD20 =2
+WbemPrivilegeEnum
+wbemPrivilegeCreateToken =1
+wbemPrivilegePrimaryToken =2
+wbemPrivilegeLockMemory =3
+wbemPrivilegeIncreaseQuota =4
+wbemPrivilegeMachineAccount =5
+wbemPrivilegeTcb =6
+wbemPrivilegeSecurity =7
+wbemPrivilegeTakeOwnership =8
+wbemPrivilegeLoadDriver =9
+wbemPrivilegeSystemProfile =10
+wbemPrivilegeSystemtime =11
+wbemPrivilegeProfileSingleProcess =12
+wbemPrivilegeIncreaseBasePriority =13
+wbemPrivilegeCreatePagefile =14
+wbemPrivilegeCreatePermanent =15
+wbemPrivilegeBackup =16
+wbemPrivilegeRestore =17
+wbemPrivilegeShutdown =18
+wbemPrivilegeDebug =19
+wbemPrivilegeAudit =20
+wbemPrivilegeSystemEnvironment =21
+wbemPrivilegeChangeNotify =22
+wbemPrivilegeRemoteShutdown =23
+wbemPrivilegeUndock =24
+wbemPrivilegeSyncAgent =25
+wbemPrivilegeEnableDelegation =26
+wbemPrivilegeManageVolume =27
+WbemQueryFlagEnum
+wbemQueryFlagDeep =0
+wbemQueryFlagShallow =1
+wbemQueryFlagPrototype =2
+WbemTextFlagEnum
+wbemTextFlagNoFlavors =1
+WbemTimeout
+wbemTimeoutInfinite =-1
+
+Member Function Documentation
+void AssociatorsAsync_ (IDispatch* objWbemSink, QString strAssocClass, QString strResultClass, QString strResultRole, QString strRole, bool bClassesOnly, bool bSchemaOnly, QString strRequiredAssocQualifier, QString strRequiredQualifier, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Get the Associators of this Object asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*, IDispatch*)), object, SLOT(AssociatorsAsync_(IDispatch*, QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("AssociatorsAsync_(IDispatch*, QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*, IDispatch*)", params); 
+IDispatch* Associators_ (QString strAssocClass, QString strResultClass, QString strResultRole, QString strRole, bool bClassesOnly, bool bSchemaOnly, QString strRequiredAssocQualifier, QString strRequiredQualifier, int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Get the Associators of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*)), object, SLOT(Associators_(QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("Associators_(QString, QString, QString, QString, bool, bool, QString, QString, int, IDispatch*)", params); 
+IDispatch* Clone_ () [slot]
+Clone this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal()), object, SLOT(Clone_()));
+Or call the function directly:
+	QAxObject * result = object->querySubObject("Clone_()"); 
+bool CompareTo_ (IDispatch* objWbemObject, int iFlags) [slot]
+Compare this Object with another 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, int)), object, SLOT(CompareTo_(IDispatch*, int)));
+Or call the function directly:
+	QVariantList params = ...
+	bool result = object->dynamicCall("CompareTo_(IDispatch*, int)", params).toBool(); 
+void DeleteAsync_ (IDispatch* objWbemSink, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Delete this Object asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, int, IDispatch*, IDispatch*)), object, SLOT(DeleteAsync_(IDispatch*, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("DeleteAsync_(IDispatch*, int, IDispatch*, IDispatch*)", params); 
+void Delete_ (int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Delete this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int, IDispatch*)), object, SLOT(Delete_(int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("Delete_(int, IDispatch*)", params); 
+void ExecMethodAsync_ (IDispatch* objWbemSink, QString strMethodName, IDispatch* objWbemInParameters, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Execute a Method of this Object asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, QString, IDispatch*, int, IDispatch*, IDispatch*)), object, SLOT(ExecMethodAsync_(IDispatch*, QString, IDispatch*, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("ExecMethodAsync_(IDispatch*, QString, IDispatch*, int, IDispatch*, IDispatch*)", params); 
+IDispatch* ExecMethod_ (QString strMethodName, IDispatch* objWbemInParameters, int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Execute a Method of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(QString, IDispatch*, int, IDispatch*)), object, SLOT(ExecMethod_(QString, IDispatch*, int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("ExecMethod_(QString, IDispatch*, int, IDispatch*)", params); 
+QString GetObjectText_ (int iFlags) [slot]
+Get the MOF text of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(GetObjectText_(int)));
+Or call the function directly:
+	QVariantList params = ...
+	QString result = object->dynamicCall("GetObjectText_(int)", params).toString(); 
+QString GetText_ (WbemObjectTextFormatEnum iObjectTextFormat, int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Retrieve a textual representation of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(WbemObjectTextFormatEnum, int, IDispatch*)), object, SLOT(GetText_(WbemObjectTextFormatEnum, int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QString result = object->dynamicCall("GetText_(WbemObjectTextFormatEnum, int, IDispatch*)", params).toString(); 
+void InstancesAsync_ (IDispatch* objWbemSink, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Return all instances of this Class asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, int, IDispatch*, IDispatch*)), object, SLOT(InstancesAsync_(IDispatch*, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("InstancesAsync_(IDispatch*, int, IDispatch*, IDispatch*)", params); 
+IDispatch* Instances_ (int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Return all instances of this Class 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int, IDispatch*)), object, SLOT(Instances_(int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("Instances_(int, IDispatch*)", params); 
+void PutAsync_ (IDispatch* objWbemSink, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Save this Object asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, int, IDispatch*, IDispatch*)), object, SLOT(PutAsync_(IDispatch*, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("PutAsync_(IDispatch*, int, IDispatch*, IDispatch*)", params); 
+IDispatch* Put_ (int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Save this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int, IDispatch*)), object, SLOT(Put_(int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("Put_(int, IDispatch*)", params); 
+void ReferencesAsync_ (IDispatch* objWbemSink, QString strResultClass, QString strRole, bool bClassesOnly, bool bSchemaOnly, QString strRequiredQualifier, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Get the References to this Object asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, QString, QString, bool, bool, QString, int, IDispatch*, IDispatch*)), object, SLOT(ReferencesAsync_(IDispatch*, QString, QString, bool, bool, QString, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("ReferencesAsync_(IDispatch*, QString, QString, bool, bool, QString, int, IDispatch*, IDispatch*)", params); 
+IDispatch* References_ (QString strResultClass, QString strRole, bool bClassesOnly, bool bSchemaOnly, QString strRequiredQualifier, int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Get the References to this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(QString, QString, bool, bool, QString, int, IDispatch*)), object, SLOT(References_(QString, QString, bool, bool, QString, int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("References_(QString, QString, bool, bool, QString, int, IDispatch*)", params); 
+void Refresh_ (int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Refresh this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int, IDispatch*)), object, SLOT(Refresh_(int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("Refresh_(int, IDispatch*)", params); 
+void SetFromText_ (QString bsText, WbemObjectTextFormatEnum iObjectTextFormat, int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Set this Object using the supplied textual representation 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(QString, WbemObjectTextFormatEnum, int, IDispatch*)), object, SLOT(SetFromText_(QString, WbemObjectTextFormatEnum, int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("SetFromText_(QString, WbemObjectTextFormatEnum, int, IDispatch*)", params); 
+IDispatch* SpawnDerivedClass_ (int iFlags) [slot]
+Create a subclass of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(SpawnDerivedClass_(int)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("SpawnDerivedClass_(int)", params); 
+IDispatch* SpawnInstance_ (int iFlags) [slot]
+Create an Instance of this Object 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int)), object, SLOT(SpawnInstance_(int)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("SpawnInstance_(int)", params); 
+void SubclassesAsync_ (IDispatch* objWbemSink, int iFlags, IDispatch* objWbemNamedValueSet, IDispatch* objWbemAsyncContext) [slot]
+Enumerate subclasses of this Class asynchronously 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(IDispatch*, int, IDispatch*, IDispatch*)), object, SLOT(SubclassesAsync_(IDispatch*, int, IDispatch*, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	object->dynamicCall("SubclassesAsync_(IDispatch*, int, IDispatch*, IDispatch*)", params); 
+IDispatch* Subclasses_ (int iFlags, IDispatch* objWbemNamedValueSet) [slot]
+Enumerate subclasses of this Class 
+Connect a signal to this slot:
+	QObject::connect(sender, SIGNAL(someSignal(int, IDispatch*)), object, SLOT(Subclasses_(int, IDispatch*)));
+Or call the function directly:
+	QVariantList params = ...
+	QAxObject * result = object->querySubObject("Subclasses_(int, IDispatch*)", params); 
+void exception (int code, QString source, QString disc, QString help) [signal]
+Connect a slot to this signal:
+	QObject::connect(object, SIGNAL(exception(int, QString, QString, QString)), receiver, SLOT(someSlot(int, QString, QString, QString))); 
+void propertyChanged (QString name) [signal]
+Connect a slot to this signal:
+	QObject::connect(object, SIGNAL(propertyChanged(QString)), receiver, SLOT(someSlot(QString))); 
+void signal (QString name, int argc, void* argv) [signal]
+Connect a slot to this signal:
+	QObject::connect(object, SIGNAL(signal(QString, int, void*)), receiver, SLOT(someSlot(QString, int, void*))); 
+
+Property Documentation
+QString objectName
+Read this property's value using QObject::property:
+	QString val = object->property("objectName").toString();
+Set this property' value using QObject::setProperty:
+	QString newValue = ...
+	object->setProperty("objectName", newValue);
+Or using the setObjectName slot. 
+QVariant Derivation_
+An array of strings describing the class derivation heirarchy, in most-derived-from order (the first element in the array defines the superclass and the last element defines the dynasty class). 
+This property is of an unsupported type. 
+IDispatch* Methods_
+The collection of Methods of this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("Methods_").toIDispatch*(); 
+IDispatch* Path_
+The path of this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("Path_").toIDispatch*(); 
+IDispatch* Properties_
+The collection of Properties of this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("Properties_").toIDispatch*(); 
+IDispatch* Qualifiers_
+The collection of Qualifiers of this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("Qualifiers_").toIDispatch*(); 
+IDispatch* Security_
+The Security Configurator for this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("Security_").toIDispatch*(); 
+IDispatch* SystemProperties_
+The collection of System Properties of this Object 
+Read this property's value using QObject::property:
+	IDispatch* val = object->property("SystemProperties_").toIDispatch*(); 
+QString control
+Read this property's value using QObject::property:
+	QString val = object->property("control").toString();
+Set this property' value using QObject::setProperty:
+	QString newValue = ...
+	object->setProperty("control", newValue);
+Or using the setControl slot. 
